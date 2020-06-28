@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Audio Synthesizer</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Audio Synthesizer</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="01_introduction/" class="nav-link">Introduction</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="02_hardware/" class="nav-link">Hardware</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="03_software/" class="nav-link">Software</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#eyfi-mega-based-audio-synthesizer" class="nav-link">eYFi-Mega based Audio Synthesizer</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#abstract" class="nav-link">Abstract</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#audio-synthesizer" class="nav-link">Audio Synthesizer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#i-oscillator" class="nav-link">I: Oscillator</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ii-amplifier" class="nav-link">II: Amplifier</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#iii-filter" class="nav-link">III: Filter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#iv-envelope" class="nav-link">IV: Envelope</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-is-gate-and-trig" class="nav-link">What is  Gate and Trig ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="eyfi-mega-based-audio-synthesizer"><strong>eYFi-Mega based Audio Synthesizer</strong></h1>
+<p><strong>Mentor(s)</strong> : Sourav, Prasad, eYRDC <br/>
+<strong>Interns</strong> : Aravinda Harithsa, Marefat Abbas<br/>
+<hr></p>
+<p><center>
+<img src=".\images\project.jpg"
+     alt="Project Image"
+     width="80%">
+<hr>
+</center></p>
+<h2 id="abstract"><strong>Abstract</strong></h2>
+<p>The objective of this project is to develop an <strong><em>Audio Synthesizer</em></strong> and <strong><em>Spectrum Analyzer</em></strong> using eYFi-Mega development board . 
+<br/></p>
+<h2 id="audio-synthesizer"><strong>Audio Synthesizer</strong></h2>
+<p>Now let us dive into world of audio processing techniques where we will learn most commonly used terms and components which are required in analog based audio synthesis . The practical demonstration of our project will be in digitally generated sound,But let us get a glimpse of what audio synthesis is </p>
+<p><strong>Audio Synthesizer</strong> is an electronic musical instrument that generates audio signals. Synthesizers generate audio through methods including subtractive synthesis, additive synthesis, and frequency modulation synthesis. Synthesizers are typically played with keyboards or controlled by sequencers, software, or other instruments, often via MIDI.</p>
+<h2 id="i-oscillator">I: Oscillator</h2>
+<p>If anything is the heart of a synthesizer then it will be its oscillator.  It produces a raw, unfiltered sound wave. An oscillator will generate a saw wave, square wave, sine wave, triangle wave, or noise. In digital synthesizers, the core of the oscillator can be a wavetable ( predefined set of values ) or even a recorded sample. The sound sample below is a saw wave, the way you would hear it if you directly tapped the audio output of an analog oscillator. Here in our demonstration we have generated musical tones wavetable with 8-bit configuration . </p>
+<h2 id="ii-amplifier">II: Amplifier</h2>
+<p>Every synthesizer has an amplifier, or more accurately, a variety of amplifiers. Often seen abbreviated as <strong>VCA (voltage-controlled amplifier)</strong> and <strong>DCA (digitally controlled amplifier)</strong>, the amplifiers are the components that determine exactly how much signal from the oscillator gets passed on to the next part of the synthesizer.</p>
+<p>The name amplifier  is a bit misleading and confusing, though. Technically speaking, an amplifier is part of a circuit that boosts signal, but in synthesizers, the amplifier actually attenuates, or reduces, any signal coming through it. In most analog and analog-modeling synthesizers, each oscillator is fed into an amplifier that keeps the oscillator signal completely attenuated until the amplifier is stimulated by an incoming <strong>control voltage (CV)</strong>. That way, we only hear the oscillator when the amplifier is activated somehow. That’s how we get separation between notes rather than a constant tone.</p>
+<p>Synthesizers have a keyboard that generates a <strong>gate</strong> signal when a key is pressed, which triggers an <strong>envelope</strong>, which then stimulates the <strong>amplifier</strong> to allow signal to pass through. Here’s what that sounds like, if you were to tap the output of an amplifier that is responding to a gate signal generated by a keyboard or a sequencer.</p>
+<h2 id="iii-filter">III: Filter</h2>
+<p>In the context of a synthesizer, a filter is a module that removes certain frequencies from the audio signal, much like an equalizer on a stereo or a recording console. The most commonly found filter types on an analog synthesizer are <strong>lowpass (LP)</strong> filters, which filter out high frequencies and let low frequencies pass (hence the name) and <strong>highpass (HP)</strong> filters, which filter out low frequencies and allow high frequencies to pass. You may also see <strong>bandpass (BP)</strong> and <strong>all-pass</strong> filters on certain synthesizer. Filters are used to alter the timbre or tone of a sound. Minimally, a synthesizer will give you control over the <strong>cutoff frequency</strong> of the filter (the frequency at which the filter starts cutting off) and the <strong>resonance</strong> of the filter, which is a boost or bump that occurs at the cutoff frequency. </p>
+<h2 id="iv-envelope">IV: Envelope</h2>
+<p>An envelope generator is a module that alters incoming voltage over time. This can be used in a lot of ways, such as to open up an amplifier circuit in order to give a volume contour to a sound. Listen to the difference between an oscillator going through an amplifier circuit that’s simply being opened and closed by a gate signal. compared with an oscillator going through an amplifier circuit that’s being opened and closed by an envelope generator that’s reacting to that same gate signal.</p>
+<p>Most synthesizers have multiple envelope generators — minimally one that controls the amplifier, and thus the volume of each note over time, and one that controls the filter and the frequency content of each note over time. However, some synthesizers, specifically modular synthesizers, allow you to patch envelope generators into practically anything.</p>
+<hr />
+<p>When it comes to envelopes, they come in many shapes and sizes, but most frequently you’ll see envelopes represented by the letters <strong>ADSR</strong> when they appear on synthesizers.</p>
+<p>A: <strong>Attack</strong>. This is the time it takes for the envelope to reach its maximum value after the note begins its attack. </p>
+<p>D: <strong>Decay</strong>. This is the time it takes for the envelope to fall from maximum value to the sustain level. The decay stage does a lot to define whether a sound is snappy and transient or long and flowing. </p>
+<p>S: <strong>Sustain</strong>. This one is tricky, because it’s the only part of the envelope that’s a measure of amplitude rather than time. The sustain level is the value at which the envelope rests after the decay stage, until the key is released. This is often expressed as a percentage of maximum value. When it comes to amplitude and filter envelopes, patches emulating plucked or struck instruments like drums or mallets would have zero sustain. Bowed instruments and brass and woodwind sounds, on the other hand, would have a higher sustain value.</p>
+<p>R: <strong>Release</strong>. Release is the time it takes for the envelope to fall back to zero after the key is released (or technically, after the gate signal ends). Think of an acoustic guitar — this instrument would have a very sharp attack, a short decay stage, zero sustain, but a long release when strummed as the strings slowly lose energy and volume. On the other hand, a marimba would have a much shorter release time. An aggressive modern synth bass or lead patch might have essentially zero release.</p>
+<h2 id="what-is-gate-and-trig">What is  Gate and Trig ?</h2>
+<p><strong>Gate signal</strong> tells the synthesizer when a note starts and when it ends. </p>
+<p>Here’s an example — a keyboard can generate a gate signal, which begins when the key is pressed and ends when the key is released. A <strong>sequencer</strong> could generate gate signals, and it could have various ways of controlling the length of the signal (and thus the length of the note, provided that the gate signal is patched to the gate input of an envelope generator that’s connected to the CV input of an amplifier).</p>
+<p><strong>Trig</strong>  stands for trigger. A trigger resembles a gate signal, but instead of having an element of time to it, it’s instantaneous. Put another way, a gate opens at one time and closes later, for instance, when you take your hand off a key. A trigger signal is an instantaneous pulse. For this reason, trigger signal is seen frequently on analog sequencers designed to drive drum machines and isn’t as suitable for melodic instruments.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2020-06-28 00:54:36.629793+00:00
+-->

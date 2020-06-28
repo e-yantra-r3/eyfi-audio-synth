@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Introduction - Audio Synthesizer</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Audio Synthesizer</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Introduction</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../02_hardware/" class="nav-link">Hardware</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../03_software/" class="nav-link">Software</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../02_hardware/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#eyfi-mega-based-audio-synthesizer" class="nav-link">eYFi-Mega based Audio Synthesizer</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#eyfi-mega" class="nav-link">eYFi Mega</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#audio-synthesizer" class="nav-link">Audio Synthesizer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#digital-signal-processing-dsp" class="nav-link">Digital Signal Processing (DSP)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#about-sound" class="nav-link">About Sound</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="eyfi-mega-based-audio-synthesizer"><strong>eYFi-Mega based Audio Synthesizer</strong></h1>
+<p><strong>Mentor(s)</strong> : Sourav, Prasad, eYRDC <br/>
+<strong>Interns</strong> : Aravinda Harithsa, Marefat Abbas<br/>
+<hr></p>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>eYFi Mega based Audio Synthesizer is an Audio device project where we will create an audio synthesizer or in simple words audio generator. In this project we will be using 4x4 16 Key Universal Keypad and a speaker. Using Keypad we will generate different tones as programmed.</p>
+<h2 id="eyfi-mega"><strong>eYFi Mega</strong></h2>
+<p>eYFi Mega Development board is an Atmega2560 and ESP32 based development board, made in India. This board is developed by eYantra at IIT Bombay. </p>
+<p><strong>Key-points:</strong></p>
+<ul>
+<li>Atmega2560 and ESP32 based</li>
+<li>WiFi Compatible</li>
+<li>FreeRTOS Compatible</li>
+<li>Arduino IDE suitable</li>
+</ul>
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<!-- Audio Synthesizer -->
+
+<h2 id="audio-synthesizer"><strong>Audio Synthesizer</strong></h2>
+<p>A <strong>Audio Synthesizer</strong> is an electronic musical instrument that generates audio signals. Synthesizers generate audio through methods including subtractive synthesis, additive synthesis, and frequency modulation synthesis. Synthesizers are typically played with keyboards or controlled by sequencers, software, or other instruments, often via MIDI.</p>
+<iframe src="https://drive.google.com/file/d/1aVFI6BiUV-mj9gIg2rddlXBOHG5_s7hp/preview" width="640" height="480"></iframe>
+
+<h2 id="digital-signal-processing-dsp"><strong>Digital Signal Processing (DSP)</strong></h2>
+<p>Mathematical manipulation of Digial Signals like Audio, Video, Pressure, Temperature, etc is called as <strong>Digital Signal Processing (DSP)</strong>. It is the use of digital processing, such as by computers or more specialized digital signal processors, to perform a wide variety of signal processing operations. DSP can involve linear or nonlinear operations. Nonlinear signal processing is closely related to nonlinear system identification and can be implemented in the time, frequency, and spatio-temporal domains.  </p>
+<h2 id="about-sound">About Sound</h2>
+<p>Sounds are just vibrations, our ears pick up the vibrations from objects  as they hit the air particles in front of them and the energy is passed on; air particle to air particle; until air particles in our ear pass on this vibrating energy to our ear drum and through some other clever nature stuff we convert this to electrical signals in our ear that the brain can interpret as sound. The pitch of a sound is the speed at which it vibrates, its frequency </p>
+<p>Sounds from vibrations produce sound waves and as such like other types of wave have certain properties, they two main ones we’re interested in are the frequency which is how many times is that repeated  and the amplitude is how much intensity is that having .An important thing to notice about the wave is that the amplitude changes over the time . It’s not instant high then instant low. We can produce sounds like this and they are called square waves but in nature this type of sound waves are rare find</p>
+<p>We are using  DAC Audio library to play (sa re ga ma pa da ne sa) tones which are stored as values between 0-65535 .  It uses a digital to analogue interface, which are built into the ESP32 (but not Arduino’s), hence why I chose that chip for the main development. This allows the relatively precise control over the final waveform. There are other ways of getting sound out of an ESP32, such as it’s in-built support for I2S streaming. With this you can output digital sound to nearly any pin and with couple or so components you can get stereo sound out. Really quite cool. In the future the library will support this approach but for now it uses the DAC pin which reduces external components (admittedly very slightly) and I think conceptually it is easier for a beginner to see how sound could be produced that way. In any case that’s the way the design was originally conceived!!</p>
+<p><strong>What is a DAC ?</strong> </p>
+<p>In electronics, a digital-to-analog converter (DAC, D/A, D2A, or D-to-A) is a system that converts a digital signal into an analog signal. An analog-to-digital converter (ADC) performs the reverse function. There are several DAC architectures  the suitability of a DAC for a particular application is determined by figures of merit including: resolution, maximum sampling frequency and others. Digital-to-analog conversion can degrade a signal, so a DAC should be specified that has insignificant errors in terms of the application.</p>
+<p><strong>DAC</strong>‘s will take a digital value and convert it to an output voltage on a specified pin. Typically in the range 0v to Vcc . So for example if the Vcc was 3.3V and our digital value could be anything between 0 and 255 (8bits). Setting it to 0 would result in 0V at the output pin, a value of 127 would be approx 1.65V at the output pin and 255 would be 3.3V. In this way we could control the brightness of a light or speed of a motor by altering the voltage supplied to it using a digital number 0 for lowest value, 255 for largest and then any value in-between.</p>
+<p>We can also use PWM as well but the quality will not be same as DAC.PWM will just simulate what DAC does when it comes to audio. DAC’s in particular come into their own when it comes to sound. Once your sound has been stored digitally (converted using an ADC) if you want to listen to it again with your analogue ears then we need to be able to convert it back from the digital data into a analogue signal again and hence the DAC’s.</p>
+<p><strong>Resolution and accuracy 
+</strong>The higher the resolution then the more accurate your digital stored sound will be when replayed. Note that there are other factors to sound accuracy – such as sample rate – which we will cover in later articles on producing sound. For now we will just look at resolution. In the CD specification it was 16 bit resolution, so the original sound when converted to a voltage using a microphone was stored as a 16 bit number – a number between 0 and 65535 . The higher the number of bits to store the sound the finer and more accurate sound representation we will get. However the human ear has limitations and it’s not just a matter of the more the number of bits the better the sound as there comes a point when our ears cannot tell the difference.</p>
+<p>In the ESP32 the resolution is 256, it has a 8 bit DAC (values from 0 to 255). This may seem poor but in fact it does allow us to have a good representation of sound . But With our 3.3 volts processor this should mean a 0 sent to the DAC would give 0V on the DAC output pin and 255 would give 3.3V on the DAC output pin. However in real life the circuitry gives just slightly different values for various technical reasons. Generally starting a little over 0V and ending at around 3.24V for value of 255.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
